@@ -1,0 +1,110 @@
+body {
+    min-width: 95vw;
+    min-height: 95vh;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-box {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    position: absolute;
+
+    /* media */
+
+    margin-top: 5%;
+    min-height: 700px;
+    min-width: 700px;
+    max-height: 700px;
+    max-width: 700px;
+    padding-left: 16px;
+    padding-top: 16px;
+
+    /* center horizontally  */
+
+    left: 50%;
+    transform: translate(-50%);
+}
+
+
+@media screen and (max-width: 992px) {
+    .footer {
+        transform: translate(-50%, 800px) !important;
+    }
+}
+@media screen and (max-width: 769px) {
+    .game-box {
+        margin-top: 15%;
+        min-height: 450px;
+        min-width: 450px;
+        max-height: 450px;
+        max-width: 450px;
+        padding-left: 8px;
+        padding-top: 8px;
+    }
+    .footer {
+        transform: translate(-50%, 580px) !important;
+    }
+}
+@media screen and (max-width: 481px) {
+    .game-box {
+        margin-top: 15%;
+        min-height: 340px;
+        min-width: 340px;
+        max-height: 340px;
+        max-width: 340px;
+        padding-left: 5px;
+        padding-top: 5px;
+    }
+    .footer {
+        transform: translate(-50%, 425px) !important;
+    }
+}
+@media screen and (max-width: 320px) {
+    .game-box {
+        margin-top: 15%;
+        min-height: 265px;
+        min-width: 265px;
+        max-height: 265px;
+        max-width: 265px;
+        padding-left: 3px;
+        padding-top: 3px;
+    }
+    .footer {
+        transform: translate(-50%, 330px) !important;
+    }
+}
+
+
+.grid-item {
+    border: solid 2px;
+    border-radius: 10%;
+    height: 90%;
+    width: 90%;
+}
+
+.footer {
+    position: absolute;
+    transform: translate(-50%, 820px);
+
+    /* center horizontally  */
+
+    left: 50%;
+}
+
+
+
+/* JS STYLE */
+
+.pink-box {
+    background-color: pink;
+}
+.green-box {
+    background-color: greenyellow;
+}
+.blue-box {
+    background-color: aqua;
+}
