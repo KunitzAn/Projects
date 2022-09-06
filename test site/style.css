@@ -1,0 +1,345 @@
+*{
+    margin: 0;
+    padding:  0;
+}
+a{
+    text-decoration: none;
+}
+body{
+background: url("./images/backfground.png");
+}
+.wrapper{
+    margin-left: 250px;
+    margin-right: 250px;
+ /*   width: 69%;*/
+    width: 1150px;
+    min-height: 1650px;
+    background-color: #fffae4;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+
+header{
+    background-color: #4e2c1e;
+    width: 100%;
+    height: 102px;
+}
+nav{
+    margin-top: 69px;
+}
+.topnav a{
+    color: white;
+    font-weight: 500;
+    font-size: 13px;
+    text-align: center;
+    background-color: #8b5814;
+    width: 12.6%;
+    height: 33px;
+    padding-top: 7px;
+}
+.topnav-left a{
+    float: left;
+    border-right: #c5ab89 1px solid;
+}
+.topnav-right a{
+    float: right;
+    border-right: #c5ab89 1px solid;
+}
+.topnav-left a:first-child{
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.topnav-left a:first-child,
+.topnav-left a:last-child{
+    padding-top: 14px;
+    height: 26px;
+}
+.topnav-right a:first-child{
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding-top: 14px;
+    height: 26px;
+}
+.topnav a:hover{
+    background: linear-gradient(#fff8de, #e8c478, #fff8de);
+    color: #4e2c1e;
+}
+.header-feedback{
+    float: right;
+    height: 53px;
+    width: 171px;
+    margin-top: 9px;
+    margin-right: 23px;
+    display: flex;
+    flex-direction: column;
+}
+.header-feedback p{
+    height: 22px;
+    width: 100%;
+    background-color: #d7c074;
+    color: #472800;
+    text-align: center;
+    border-radius: 4px;
+    margin-bottom: 9px;
+}
+.phone-number{
+    height: 20px;
+    width: 200px;
+    float: left;
+    margin: 24px;
+    color: white;
+    font-size: 26px;
+}
+.logo-background{
+    margin-top: 20px;
+    margin-left: 430px;
+    display: block;
+    position: absolute;
+    z-index: 3;
+}
+.logo-foreground{
+    margin-top: 53px;
+    margin-left: 477px;
+    display: block;
+    position: absolute;
+    z-index: 4;
+}
+.strapline-logo{
+    margin-top: 15px;
+    margin-left: 417px;
+    display: block;
+    position: absolute;
+}
+
+
+/*MAIN */
+.photo-slider{
+    display: flex;
+    flex-direction: column;
+}
+.photo-background{
+    width: 100%;
+    height: 325px;
+    margin-top: 350px;
+    background: url("./images/photo-background.png") no-repeat;
+    z-index: 1;
+}
+.photo-1{
+    background: url(./images/photo-1.png) no-repeat;
+    width: 100%;
+    height: 460px;
+    margin-top: -665px;
+    z-index: 2;
+}
+.photo-2{
+    background: url(./images/photo-2.png) no-repeat;
+    width: 100%;
+    height: 460px;
+    margin-top: -665px;
+    z-index: 2;
+}
+.photo-3{
+    background: url(./images/photo-3.png) no-repeat;
+    width: 100%;
+    height: 460px;
+    margin-top: -665px;
+    z-index: 2;
+}
+.photo-4{
+    background: url(./images/photo-4.png) no-repeat;
+    width: 100%;
+    height: 460px;
+    margin-top: -665px;
+    z-index: 2;
+}
+.photo-5{
+    background: url(./images/photo-5.png) no-repeat;
+    width: 100%;
+    height: 460px;
+    margin-top: -665px;
+    z-index: 2;
+}
+.photo-6{
+    background: url(./images/photo-6.png) no-repeat;
+    width: 100%;
+    height: 460px;
+    margin-top: -665px;
+    z-index: 2;
+}
+
+/* BUTTONS */
+
+.buttons{
+    margin-top: 15px;
+    margin-left: 492px;
+    display: flex;
+    flex-direction: row;
+    z-index: 4;
+}
+.button{
+    background-color: #472800;
+    width: 15px;
+    height: 15px;
+    border: none;
+    border-radius: 50%;
+    display: block;
+    top: -17px;
+    position: relative;
+    margin-right: 15px;
+    margin-top: 14px;
+}
+.active{
+    border: 5px solid #472800;
+    background-color: #c5ab89;
+}
+
+/* STAFF */
+
+.top-ornament{
+    background: url("./images/ornament.center.png") no-repeat;
+    display: block;
+    width: 130px;
+    height: 50px;
+    margin-left: 510px;
+    margin-top: 15px;
+}
+.bottom-ornament{
+    display: flex;
+    flex-direction: row;
+    margin-top: 110px;
+    margin-left: 40px;
+}
+.left-ornament,
+.right-ornament{
+    width: 550px;
+    height: 150px;
+    display: block;
+}
+.left-ornament{
+    background: url("./images/ornament.left.png") no-repeat;
+}
+.right-ornament{
+    background: url("./images/ornament-right.png") no-repeat;
+    margin-left: -30px;
+}
+.text-staff{
+    margin-top: -270px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 130px;
+}
+.permanent-staff{
+    background: url("./images/permanent-staff.png") no-repeat;
+    display: block;
+    width: 600px;
+    height: 252px;
+    margin-top: -10px !important;
+    margin-left: 10px;
+}
+.constant-staff{
+    background: url("./images/constant-staff.png") no-repeat;
+    display: block;
+    width: 600px;
+    height: 252px;
+}
+
+/* PHOTOS */
+
+.photos {
+    display: flex;
+    flex-direction: row;
+    margin: 50px 75px;
+    margin-bottom: 0 !important;
+}
+.photo-7{
+    background: url("./images/photo-7.png") no-repeat;
+}
+.photo-8{
+    background: url("./images/photo-8.png") no-repeat;
+    margin-top: 23px;
+}
+.photo-9{
+    background: url("./images/photo-9.png") no-repeat;
+    margin-top: 20px;
+}
+.photo-10{
+    background: url("./images/photo-10.png") no-repeat;
+    margin-right: 0 !important;
+    margin-top: 23px;
+}
+.photo-7,
+.photo-8,
+.photo-9,
+.photo-10{
+    margin-right: 35px;
+    width: 225px;
+    height: 300px;
+}
+
+/* TEXT */
+
+.text-header{
+    font-size: xx-large;
+    margin-left: 75px;
+    color: #4e2c1e;
+}
+.text{
+    background: url("./images/text.png") no-repeat;
+    width: 1000px;
+    height: 550px;
+    margin: 15px 75px;
+}
+
+/* FOOTER */
+
+footer{
+    background-color: #4e2c1e;
+    width: 100%;
+    min-height: 105px;
+}
+.nav-footer{
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    margin: 20px 75px;
+    justify-content: space-between;
+}
+.nav-footer a{
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+.nav-splitter{
+    font-size: 13px;
+    color: #fffae4;
+}
+.info-footer{
+    display: flex;
+    flex-direction: row;
+}
+.phone-number-footer{
+    height: 20px;
+    width: 200px;
+    float: left;
+    color: white;
+    font-size: 26px;
+    margin-left: 75px;
+}
+.company-footer{
+    color: white;
+    font-size: 13px;
+    margin-left: 410px;
+    margin-top: 15px;
+}
+.logo-footer{
+    background: url("./images/logo-uniweb.png") no-repeat;
+    height: 28px;
+    width: 75px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+

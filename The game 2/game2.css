@@ -9,8 +9,8 @@ body {
 
 .game-box {
     display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
     position: absolute;
 
     /* center horizontally  */
@@ -100,7 +100,7 @@ body {
     height: 90%;
     width: 90%;
 }
-.black-boxex {
+.card {
     border: solid 2px;
 }
 
@@ -123,7 +123,7 @@ button {
 
 
 .header-box {
-    width: 100px;
+    width: 140px;
     height: 35px;
     border: solid 2px;
     margin-top: 10px;
@@ -137,127 +137,77 @@ button {
 
 .header-box div {
     margin-top: 8px;
-    margin-left: 30px;
+    margin-left: 15px;
 }
 
 .score-box  div{
-    margin-left: 45px !important;
-}
-
-/* arrows */
-
-.arrows div {
-    background-size: contain;
-    min-width: 30px;
-    min-height: 30px;
-    z-index: 2;
-    position: absolute;
-}
-
-.arrows {
-    z-index: 2;
-    position: absolute;
-}
-
-/* horizontal */
-.arrow-1h {
-    margin-left: 223px;
-    margin-top: 107px;
-}
-.arrow-2h {
-    margin-left: 456px;
-    margin-top: 107px;
-}
-.arrow-3h {
-    margin-left: 223px;
-    margin-top: 340px;
-}
-.arrow-4h {
-    margin-left: 456px;
-    margin-top: 340px;
-}
-.arrow-5h {
-    margin-left: 223px;
-    margin-top: 575px;
-}
-.arrow-6h {
-    margin-left: 456px;
-    margin-top: 575px;
-}
-
-/* vertical */
-
-.vertical-arrow {
-    transform: rotate(90deg);
-}
-
-.arrow-1v {
-    margin-left: 105px;
-    margin-top: 222px;
-}
-.arrow-2v {
-    margin-left: 340px;
-    margin-top: 222px;
-}
-.arrow-3v {
-    margin-left: 570px;
-    margin-top: 222px;
-}
-.arrow-4v {
-    margin-left: 105px;
-    margin-top: 456px;
-}
-.arrow-5v {
-    margin-left: 340px;
-    margin-top: 456px;
-}
-.arrow-6v {
-    margin-left: 570px;
-    margin-top: 456px;
+    margin-left: 20px !important;
 }
 
 
 
 /* JS STYLE */
 
-.pink-box {
-    background-color: pink;
+.image {
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    margin: 10px 0 0 10px;
+    border-radius: 10%;
 }
-.green-box {
-    background-color: greenyellow;
+.transparant-image{
+    z-index: 1;
+    background-color: rgb(92 89 86);;
 }
-.blue-box {
-    background-color: aqua;
+.closen-card {
+    background-color: rgb(92 89 86);
 }
-
-/* smiles */
-.smile-div {
-    background-image: url("./pics/smile.png");
-    background-repeat:no-repeat;
-    z-index: 2;
-    max-width: max-content;
-
-    min-height: 40px;
-    min-width: 40px;
-
+.img1-1 {
+    background-image: url(./pics/smile.png);
+    z-index: -1;
 }
-
-
-.visible-arrow {
-    background-image: url("./pics/arrow.png");
+.img1-2 {
+    background-image: url(./pics/angry.png);
+    z-index: -1;
 }
-.invisible-arrow {
-    background-image: url("./pics/invisible-arrow.png");
+.img2-1 {
+    background-image: url(./pics/egal.png);
+    z-index: -1;
 }
-
-.blinking-boxes {
-    animation: blink 1s infinite;
+.img2-2 {
+    background-image: url(./pics/sad.png);
+    z-index: -1;
 }
- @keyframes blink {
-    0% {
-        border: solid 3px red;
-    }
-        100% {
-        border: none;
-    }
+.img3-1 {
+    background-image: url(./pics/smile.png);
+    z-index: -1;
+}
+.img3-2 {
+    background-image: url(./pics/smile.png);
+    z-index: -1;
+}
+.img4-1 {
+    background-image: url(./pics/smile.png);
+    z-index: -1;
+}
+.img4-2 {
+    background-image: url(./pics/smile.png);
+    z-index: -1;
+}
+.img5-1 {
+    background-image: url(./pics/smile.png);
+    z-index: -1;
+}
+.img5-2 {
+    background-image: url(./pics/smile.png);
+    z-index: -1;
+}
+.img6-1 {
+    background-image: url(./pics/smile.png);
+    z-index: -1;
+}
+.img6-2 {
+    background-image: url(./pics/smile.png);
+    z-index: -1;
 }

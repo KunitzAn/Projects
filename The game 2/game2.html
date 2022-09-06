@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Game 2</title>
+    <link rel="stylesheet" href="game2.css"/>
+</head>
+<body>
+
+    <div class="header">
+        <div class="header-box time-box"><div><span>Time left: </span><span id="timeДуае">0</span><span > sec</span></div></div>
+        <div class="header-box score-box"><div><span>Score:</span><span id="score">100</span></span></div></div>
+    </div>
+
+
+    <div class="game-box">
+
+        <div class="box grid-item closen-card card" id="1" onclick="openCard(this.id)"><div id="img1" class="image transparant-image"></div></div>
+        <div class="box grid-item closen-card card" id="2" onclick="openCard(this.id)"><div id="img2" class="image transparant-image"></div></div>
+        <div class="box grid-item closen-card card" id="3" onclick="openCard(this.id)"><div id="img3" class="image transparant-image"></div></div>
+        <div class="box grid-item closen-card card" id="4" onclick="openCard(this.id)"><div id="img4" class="image transparant-image"></div></div>
+        <div class="box grid-item closen-card card" id="5" onclick="openCard(this.id)"><div id="img5" class="image transparant-image"></div></div>
+        <div class="box grid-item closen-card card" id="6" onclick="openCard(this.id)"><div id="img6" class="image transparant-image"></div></div>
+        <div class="box grid-item closen-card card" id="7" onclick="openCard(this.id)"><div id="img7" class="image transparant-image"></div></div>
+        <div class="box grid-item closen-card card" id="8" onclick="openCard(this.id)"><div id="img8" class="image transparant-image"></div></div>
+        <div class="box grid-item closen-card card" id="9" onclick="openCard(this.id)"><div id="img9" class="image transparant-image"></div></div>
+        <div class="box grid-item closen-card card" id="10" onclick="openCard(this.id)"><div id="img10" class="image transparant-image"></div></div>
+        <div class="box grid-item closen-card card" id="11" onclick="openCard(this.id)"><div id="img11" class="image transparant-image"></div></div>
+        <div class="box grid-item closen-card card" id="12" onclick="openCard(this.id)"><div id="img12" class="image transparant-image"></div></div>
+
+    </div>
+
+    <div class="footer">
+        <button class="startGame" onclick="start()">Start Game</button>
+        <button class="goToMenu">Go to Menu</button>
+        <button class="stopGame">Stop Game</button>
+    </div>
+
+    <script src="game2.js"></script> 
+</body>
+</html>
