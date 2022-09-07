@@ -26,15 +26,6 @@
     height: 120px;
     margin-left: 820px;
 }
-.staff-selection{
-    width: 90%;
-    height: 100px;
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    margin: -105px 5%;
-}
-
 .applicants-list{
     margin-top: 130px;
     margin-left: 60px;
@@ -43,8 +34,11 @@
 tr{
     height: 30px;
     width: 100%;
-    color: #4e2c1e;
     font-size: 18px;
+    color: #4e2c1e75;
+}
+.visible{
+    color: #4e2c1e !important;  
 }
 .odd th{
     border-right: #d3a86c solid 1px;
@@ -63,84 +57,84 @@ tr th:nth-child(2){
     background-color: white;
 }
 
-/*
-.applicants-list{
-    display: flex;
-    flex-direction: column;
-    margin: 130px 5%;
-}
-.applicant{
+/* STAFF SELECTION */
+.staff-selection{
+    width: 90%;
+    height: 100px;
+    background-color: white;
     display: flex;
     flex-direction: row;
-    height: 25px;
-    width: 100%;
-    padding: 5px 0;
-    font-size: larger;
-    color: #4e2c1e;
-    justify-content: space-between;
+    margin: -105px 5%;
 }
-.odd{
-    background-color: white;
+.collumn{
+    display: flex;
+    flex-direction: column;
 }
-.splitter{
-    font-size: 24px;
+.row {
+    display: flex;
+    flex-direction: row;
 }
-.applicants-list .applicant:nth-child(6) p:first-child{
-    margin-right: 60px;
-}
-.applicants-list .applicant:nth-child(5) p:first-child{
-    margin-right: 45px;
-}
-.applicants-list .applicant:nth-child(4) p:first-child{
-    margin-right: -10px;
-}
-.applicants-list .applicant:nth-child(3) p:first-child{
-    margin-right: 22px;
-}
-.applicants-list .applicant:nth-child(2) p:first-child{
-    margin-right: 38px;
-}
-.applicants-list .applicant:nth-child(1) p:first-child{
-    margin-right: 0px;
-}
-
-.applicants-list .applicant:nth-child(6) p:nth-child(3){
-    margin-right: 50px;
-}
-.applicants-list .applicant:nth-child(5) p:nth-child(3){
-    margin-right: 47px;
-}
-.applicants-list .applicant:nth-child(4) p:nth-child(3){
-    margin-right: -2px;
-}
-.applicants-list .applicant:nth-child(3) p:nth-child(3){
-    margin-right: 26px;
-}
-.applicants-list .applicant:nth-child(2) p:nth-child(3){
-    margin-right: 38px;
-}
-.applicants-list .applicant:nth-child(1) p:nth-child(3){
-    margin-right: 0px;
-}
-
-.applicants-list .applicant:nth-child(5) p:nth-child(5){
-    margin-right: 5px;
-}
-.applicants-list .applicant:nth-child(4) p:nth-child(5){
-    margin-right: -10px;
-}
-.applicants-list .applicant:nth-child(3) p:nth-child(5){
-    margin-right: 17px;
-}
-.applicants-list .applicant:nth-child(2) p:nth-child(5){
-    margin-right: -10px;
-}
-.applicants-list .applicant:nth-child(1) p:nth-child(5){
+.row input{
+    margin-left: 15px;
     margin-right: 10px;
+    width: 40px;
+    text-align: center;
+    font-size: 16px;
+    color: #4e2c1e;
+    border: transparent;
+}
+.profession{
+    margin-left: 40px;
+}
+.profession p{
+    margin-top: 20px;
+    color: #4e2c1e;
+    font-size: 18px;
+    margin-left: 5px;
+}
+.profession select{
+    background: transparent;
+    -webkit-appearance: none;
+}
+.profession .select-style-profession{
+    background: url("./images/select1.png") no-repeat right;
+    margin-top: 10px;
+    width: 260px;
+    height: 40px;
+    margin-left: 10px;
+    z-index: 1;
 }
 
-.splitter{
-    font-size: 24px;
+.age-and-workperiod{
+    margin-top: 20px;
+    margin-left: 80px;
+    color: #4e2c1e;
+    font-size: 18px;
+    z-index: 1;
+}
+.work-period{
+    margin-bottom: 13px;
+    margin-left: 19px;
 }
 
-*/
+.submitt-button{
+    width: 140px;
+    height: 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-top: 40px;
+    margin-left: 150px;
+    background-color: #ab6e17;
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* TEXT */
+.text{
+    margin-top: 60px !important;
+    margin-bottom: 40px !important;
+}
+
+/* FOR JS */

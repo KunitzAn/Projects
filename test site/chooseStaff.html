@@ -64,7 +64,7 @@
             </nav>
 
             
-            <form class="send-cv invisible" id="form-cv">
+            <form class="send-cv invisible form" id="form-cv">
                 <input type="text" value="ФИО">
                 <input type="tel" pattern="+7-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"required value="+7-999-999-99-99">
                 <div class="select-style">
@@ -83,7 +83,7 @@
                 <button>ОТПРАВИТЬ</button>
             </form>
 
-            <form class="send-application invisible" id="form-application">
+            <form class="send-application invisible form" id="form-application">
                 <input type="text" value="ФИО">
                 <input type="tel" pattern="+7-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"required value="+7-999-999-99-99">
                 <div class="select-style-application">
@@ -95,14 +95,16 @@
                         <option value="5">Конюх</option>
                         <option value="6">Повар</option>
                     </select>
-                    <div class="select-style-application">
-                        <select>
-                            <option value="1">График работы</option>
-                            <option value="2">Полный день</option>
-                            <option value="3">Пол дня</option>
-                            <option value="4">Несколько часов</option>
-                            <option value="5">Круглосуточно</option>
-                        </select>
+                </div>
+                <div class="select-style-application">
+                    <select>
+                        <option value="1">График работы</option>
+                        <option value="2">Полный день</option>
+                        <option value="3">Пол дня</option>
+                        <option value="4">Несколько часов</option>
+                        <option value="5">Круглосуточно</option>
+                    </select>
+                </div>
                 <input type="text" value="Дополнительная информация">
                 <button>ОТПРАВИТЬ</button>
             </form>
@@ -131,58 +133,91 @@
                     <div class="staff-ornament-left"></div>
                     <div class="staff-ornament-right"></div>
                 </div>
-                <div class="staff-selection"></div>
+
+                <div class="staff-selection">
+                    <div class="profession collumn">
+                        <p>Показать только</p>
+                        <div class="select-style-profession">
+                            <select id="staffKind">
+                                <option value="1">Няня</option>
+                                <option value="2">Гувернантка</option>
+                                <option value="3">Садовник</option>
+                                <option value="4">Уборщица</option>
+                                <option value="5">Конюх</option>
+                                <option value="6">Повар</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="age-and-workperiod collumn">
+                        <div class="work-period row">
+                            <p>Стаж от</p>
+                            <input type="number" id="work-years-min" value="1" min="0" max="50">
+                            <p>до</p>
+                            <input type="number" id="work-years-max" value="30" min="0" max="50">
+                            <p>лет</p>
+                        </div>
+                        <div class="age row">
+                            <p>Возраст от</p>
+                            <input type="number" id="age-min" value="25" min="0" max="100">
+                            <p>до</p>
+                            <input type="number" id="age-max" value="65" min="0" max="100">
+                            <p>лет</p>
+                        </div>
+                    </div>
+                    <button class="submitt-button" onclick="chooseStaff()">Подобрать</button>
+                </div>
+
                 <table class="applicants-list">
 
-                    <tr class="odd">
+                    <tr class="person odd gouvernante visible">
                         <th>Лопухова Надежда Александровна</th>
                         <th>Гувернантка</th>
                         <th>45</th>
                         <th>15 лет</th>
                     </tr>
-                    <tr>
+                    <tr class="person nurse visible">
                         <th>Ермакова Надежда Ивановна</th>
                         <th>Няня</th>
                         <th>30</th>
                         <th>5 лет</th>
                     </tr>
-                    <tr class="odd">
+                    <tr class="person odd gardner visible">
                         <th>Филимонов Евгений Семенович</th>
                         <th>Садовник</th>
                         <th>50</th>
                         <th>20 лет</th>
                     </tr>
-                    <tr>
+                    <tr class="person cleaner visible">
                         <th>Лопухова Надежда Александровна</th>
                         <th>Уборщица</th>
                         <th>35</th>
                         <th>7 лет</th>
                     </tr>
-                    <tr class="odd">
+                    <tr class="person odd groom visible">
                         <th>Миронов Юрий Герасимович</th>
                         <th>Конюх</th>
                         <th>60</th>
                         <th>15 лет</th>
                     </tr>
-                    <tr>
+                    <tr class="person cook visible">
                         <th>Новикова Нина Алексеевна</th>
                         <th>Повар</th>
                         <th>55</th>
                         <th>30 лет</th>
                     </tr>
-                    <tr class="odd">
+                    <tr class="person odd gouvernante visible">
                         <th>Лопухова Надежда Александровна</th>
                         <th>Гувернантка</th>
                         <th>45</th>
                         <th>15лет</th>
                     </tr>
-                    <tr>
+                    <tr class="person gouvernante visible">
                         <th>Лопухова Надежда Александровна</th>
                         <th>Гувернантка</th>
                         <th>45</th>
                         <th>15 лет</th>
                     </tr>
-                    <tr class="odd">
+                    <tr class="person odd gouvernante visible">
                         <th>Лопухова Надежда Александровна</th>
                         <th>Гувернантка</th>
                         <th>45</th>
@@ -194,7 +229,34 @@
 
 
             <div class="text-wrapper">
-                <div class="text"></div>
+                <p class="text">Наличие в доме обслуживающего персонала водителя, няни, гувернантки, горничной, 
+                    домработницы это вовсе не дань моде и не причуды избалованных нежданно свалившимся богатством 
+                    нуворишей. Напротив, услугами сиделки или няни пользуются сегодня те, кто отлично знает цену 
+                    деньгам и своему времени. 
+                    <br>
+                    <br>
+                    Наличие в доме обслуживающего персонала - водителя, няни, гувернантки, 
+                    горничной, домработницы - это вовсе не дань моде и не причуды избалованных нежданно свалившимся
+                    богатством нуворишей. Напротив. услугами сиделки или няни пользуются сегодня те, кто отлично знает 
+                    цену деньгам и своему времени Наличие в доме обслуживающего персонала - водителя, няни, гувернантки, 
+                    горничной, домработницы - это вовсе не дань моде и не причуды избалованных нежданно свалившимся 
+                    богатством нуворишей. Напротив, услугами сиделки или няни пользуются сегодня те, кто отлично знает 
+                    цену деньгам и своему времени. Люди, для которых важно не только вырастить ребенка, но и создать 
+                    основу будущего благосостояния, построив свою карьеру - - вот основная категорий заказчиков, которые 
+                    ежедневно пользуются услугами нашей компании по подбору домашнего персонала. Заказ няни, сиделки или 
+                    домработницы является благом не только для женщины, которая имеет возможность строить свою карьеру 
+                    или получить, - наконец, передышку от- выпоянения бесконечных домашних обязанностей, но и для всех 
+                    остальных членов семьи, которые могут провести вместе свободный вечер или выходные. А доступные цены, 
+                    которые устанавливает на свои услуги наша компания, и предлагаемый нами широкий выбор разлычных 
+                    категорий домашнего персонала делают исключительно удобным и, главное, безопасным процесс поиска няни 
+                    для малыша, сиделки для пожилых членов семьи или домработницы для квартиры или загородного особняка. 
+                    <br>
+                    <br>
+                    Наличие в доме обслуживающего персонала - водителя, няни, гувернантки, горничной, домработницы - это
+                    повсе не дань моде и не причуды избалованных нежданно свалившимся богатством нуворишей. Напротив, 
+                    услугами сиделки или няни пользуются сегодня те, кто отлично знает цену деньгам и своему времени. 
+                    Люди, для которых важно не только вырастить ребейка, но и создать орнову
+                </p>
             </div>
 
         </main>

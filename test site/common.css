@@ -338,10 +338,11 @@ display: block;
 /* TEXT */
 
 .text{
-    background: url("./images/text.png") no-repeat;
     width: 1000px;
     height: 550px;
     margin: 15px 75px;
+    font-size: 18px;
+    color: #45250a;
 }
 
 
