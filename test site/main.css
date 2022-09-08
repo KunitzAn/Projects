@@ -89,6 +89,9 @@
     font-size: 16px;
     margin-top: 10px;
 }
+.staff-button:hover{
+    cursor: pointer;
+}
 .staff-button-left{
     background-color: #eac87f;
     color: #4e2c1e;

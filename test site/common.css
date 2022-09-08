@@ -167,6 +167,9 @@ form button{
     border: none;
     border-radius: 5px;
 }
+.button-form:hover {
+    cursor: pointer;
+}
 
 /* SEND APPLICATION */
 .send-application input,
