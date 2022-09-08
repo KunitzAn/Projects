@@ -400,3 +400,8 @@ footer{
     margin-top: 5px;
 }
 
+
+
+.dropdown:focus ~ .form input:first-child{
+    margin-top: -400px;
+}

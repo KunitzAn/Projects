@@ -130,8 +130,17 @@ function openForm(id){
         });
         form.classList.remove("invisible");
     }
-
 }
+
+function menuDropdown(){
+    var forms = document.getElementsByClassName("form");
+    if(!forms[0].classList.contains("invisible") || !forms[1].classList.contains("invisible")) {
+    [].forEach.call(forms, function (element) {
+        element.classList.add("invisible")
+    });
+    }
+}
+
 
 
 
