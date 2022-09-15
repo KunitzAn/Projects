@@ -1,0 +1,194 @@
+/* CHOOSE STAFF */
+
+.choose-staff{
+    min-width: 520px;
+}
+.staff-header p{
+    text-align: center;
+    color: #4e2c1e;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.choose-staff-background{
+    background: url("./images/choose-staff-bg.png") no-repeat;
+    width: 880px;
+    height: 117px;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: #4e2c1e;
+    font-size: 19px;
+}
+.collumn{
+    display: flex;
+    flex-direction: column;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.row input{
+    width: 40px;
+    text-align: center;
+    font-size: 18px;
+    color: #4e2c1e;
+    border: transparent;
+}
+
+/* profession */
+
+.profession{
+    width: 250px;
+    margin-left: 62px;
+    margin-top: 36px;
+}
+.profession p{
+    color: #4e2c1e;
+    font-size: 20px;
+    font-weight: normal;
+    position: absolute;
+    left: 60px;
+    top: 34px;
+}
+.profession select{
+    background: transparent;
+    -webkit-appearance: none;
+}
+.profession-style-img{
+    background: url("./images/select1.png") no-repeat;
+    width: 27px;
+    height: 31px;
+    position: absolute;
+    left: 233px;
+    top: 67px;
+
+}
+#staffKind{
+    position: absolute;
+    top: 68px;
+    max-width: 202px;
+    height: 31px;
+    left: 58px;
+    margin: 0 !important;
+    margin-left: 0 !important;
+    color: #4e2c1e;
+    font-size: 20px;
+
+}
+
+/* age */
+
+.work-period{
+    position: relative;
+    top: 30px;
+    left: 30px;
+    width: 296px;
+}
+.age{
+    position: relative;
+    top: 50px;
+    width: 322px;
+}
+
+/* button */
+
+.submitt-button{
+    width: 141px;
+    height: 24px;
+    border: none;
+    background: transparent;
+    top: 53px;
+    right: 53px;
+    position: absolute;
+}
+.submit-buttin-style{
+    background: url("./images/choose-staff-button.png") no-repeat;
+    width: 141px;
+    height: 24px;
+    display: block;
+}
+.submitt-button:hover{
+    cursor: pointer;
+}
+.submit-buttin-style p{
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    height: 24px;
+    line-height: 24px;
+}
+
+/* table */
+
+.applicants-list{
+    position: relative;
+    top: 146px;
+    width: 880px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-spacing: 0px 0px;
+    font-weight: normal !important;
+}
+tr{
+    height: 34px;
+    width: 880px;
+    font-size: 18px;
+    color: #4e2c1e75;
+    margin: 0;
+}
+.visible{
+    color: #4e2c1e !important;  
+}
+.odd th{
+    border-right: #d3a86c solid 1px;
+}
+.odd:first-child{
+    background-color: white !important;
+}
+
+
+tr th:first-child{
+    min-width: 348px;
+    text-align: left;
+}
+tr th:nth-child(2){
+    min-width: 229px;
+}
+tr th:nth-child(3){
+    min-width: 143px;
+}
+tr th:nth-child(4){
+    min-width: 160px;
+    border: none !important;
+}
+
+.even{
+    background-color: white;
+}
+.even th{
+    border-right: white solid 1px;
+}
+th p{
+    margin-left: 3px;
+}
+
+
+/* TEXT */
+
+.text-wrapper{
+    position: absolute;
+    width: 877px;
+    height: 404px;
+    top: 1056px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.text-header{
+    margin-bottom: 18px;
+}
