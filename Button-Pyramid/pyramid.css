@@ -1,0 +1,72 @@
+body {
+    width: 90vw;
+}
+.input {
+    display: flex;
+    flex-direction: row;
+}
+.buttons {
+    font-size: 18px;
+    margin: 8px;
+    width: 100px;
+    height: 40px;
+    background-color: #5b9aa0;
+    color: white;
+    border: #622569 solid 2px;
+    border-radius: 60%;
+    cursor: pointer;
+}
+.input-window {
+    background-color: #d6d4e0;
+    color: #622569;
+    border: solid;
+    width: 150px;
+    height: 32px;
+    font-size: 18px;
+    margin: 10px;
+}
+
+
+
+.pyramid {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    width: max-content;
+}
+
+.line {
+    display: flex ;
+    flex-direction: row;
+    justify-content: center;
+}
+.button {
+    min-width: 100px;
+    width: 100px;
+    height: 25px;
+    background-color: #622569;
+    margin: 10px;
+    font-weight: bold;
+    color: #d6d4e0;
+}
+
+@media screen and (max-width: 450px) {
+    .button {
+        width: 35px;
+        margin: 5px;
+    }
+    .pyramid {
+        margin-left: 5px;
+    }
+    .buttons {
+        font-size: 14px;
+        width: 70px;
+        height: 40px;
+    }
+    .input-window {
+        width: 80px;
+    }
+    .input {
+        max-width: 350px;
+    }
+}
