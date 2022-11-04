@@ -591,3 +591,35 @@ document.onkeydown = (e, key) => {
     sum(key);
 }
 
+
+
+document.addEventListener('swiped', function(e) {
+    console.log(e.target); // the element that was swiped
+    console.log(e.detail.dir); // swiped direction
+});
+//swiped-left
+document.addEventListener('swiped-left', function(e) {
+    console.log(e.target); // the element that was swiped
+    key = "left";
+    sum(key);
+});
+//swiped-right
+document.addEventListener('swiped-right', function(e) {
+    console.log(e.target); // the element that was swiped
+    key = "right";
+    sum(key);
+});
+//swiped-up
+document.addEventListener('swiped-up', function(e) {
+    console.log(e.target); // the element that was swiped
+    key = "up";
+    sum(key);
+});
+//swiped-down
+document.addEventListener('swiped-down', function(e) {
+    console.log(e.target); // the element that was swiped
+    key = "down";
+    sum(key);
+});
+
+

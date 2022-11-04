@@ -27,6 +27,7 @@
     background-color: transparent;
     border: 2px solid white;
     text-align: center;
+    width: 150px;
 }
 .grid-item span{
     color: white;
@@ -34,4 +35,112 @@
     padding-top: 50px;
     font-weight: bolder;
     display: block;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 480px) {
+    .wrapper{
+        width: 300px;
+        height: 300px;
+        margin-top: 100px;
+    }
+    .gameField{
+        margin-top: 50px;
+        width: 215px;
+        height: 200px;
+        margin-left: 42px;
+    }
+    .grid-item{
+        width: 50px;
+    }
+    .grid-item span{
+        font-size: 20px;
+        padding-top: 12px;
+    }
+}
+@media only screen and (max-width: 600px) and (min-width: 481px) {
+    .wrapper{
+        width: 400px;
+        height: 400px;
+        margin-top: 150px;
+    }
+    .gameField{
+        margin-top: 50px;
+        width: 315px;
+        height: 300px;
+        margin-left: 42px;
+    }
+    .grid-item{
+        width: 75px;
+    }
+    .grid-item span{
+        font-size: 25px;
+        padding-top: 22px;
+    }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .wrapper{
+        width: 500px;
+        height: 500px;
+        margin-top: 150px;
+    }
+    .gameField{
+        margin-top: 50px;
+        width: 415px;
+        height: 400px;
+        margin-left: 42px;
+    }
+    .grid-item{
+        width: 100px;
+    }
+    .grid-item span{
+        font-size: 35px;
+        padding-top: 30px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .wrapper{
+        width: 600px;
+        height: 600px;
+        margin-top: 150px;
+    }
+    .gameField{
+        margin-top: 50px;
+        width: 515px;
+        height: 500px;
+        margin-left: 42px;
+    }
+    .grid-item{
+        width: 125px;
+    }
+    .grid-item span{
+        font-size: 35px;
+        padding-top: 50px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .wrapper{
+        width: 700px;
+        height: 700px;
+        margin-top: 150px;
+    }
+    .gameField{
+        margin-top: 50px;
+        width: 600px;
+        height: 600px;
+        margin-left: 50px;
+
+    }
+    .grid-item{
+        width: 150px;
+    }
+    .grid-item span{
+        font-size: 35px;
+        padding-top: 50px;
+    }
 }
