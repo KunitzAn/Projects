@@ -2,10 +2,19 @@
     margin: 0;
     padding: 0;
 }
+html{
+    position: sticky;
+    margin: o auto;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+}
 body{
     position: fixed;
-    width: 100%;
-    overflow-y: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 .wrapper{
     width: 700px;
