@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    width: 700px;
+    height: 700px;
+    margin: auto;
+    margin-top: 150px;
+    background-color: white;
+    border: 5px solid coral;
+    border-radius: 15px;
+    display: block;
+}
+.gameField{
+    margin-top: 50px;
+    width: 600px;
+    height: 600px;
+    margin-left: 50px;
+    background-color: coral;
+    display: block;
+
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto;
+}
+.grid-item{
+    background-color: transparent;
+    border: 2px solid white;
+    text-align: center;
+}
+.grid-item span{
+    color: white;
+    font-size: 35px;
+    padding-top: 50px;
+    font-weight: bolder;
+    display: block;
+}
