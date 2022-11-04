@@ -1,6 +1,12 @@
 
 var key;
 
+function changeScore(newPoints){
+    var oldScore = document.getElementById("scr").innerText;
+    var newScore = +oldScore + newPoints;
+    document.getElementById("scr").innerText = newScore;
+}
+
 function editField(field, direction){
     // сохраняем массив в сешн сторадж
     sessionStorage.removeItem('field');
@@ -55,15 +61,18 @@ function editField(field, direction){
 }
 
 function right(field){
+    var points = 0;
     field.forEach(arr => {  
         var count = 0;
         for(let i = arr.length-1; i>=0; i--){
             if(!arr[i] == 0){
                 if(arr[i] == arr[i-1]){
+                    points+=arr[i];    // add score
                     arr[i] = (arr[i]*2);
                     arr[i-1] = 0;
                     count++;
                 }else if(arr[i] == arr[i+1]){
+                    points+=arr[i];    // add score
                     arr[i+1] = (arr[i]*2);
                     arr[i] = 0;
                     count++;
@@ -83,9 +92,11 @@ function right(field){
 
                 if(i>0 && arr[i]>0 && (arr[i] == arr[i+1] || arr[i] == arr[i-1]) && count == 0) { // если i не в конце, то проверяем и складываем число под индексом i уже после сдвига
                     if(arr[i] == arr[i-1]){
+                        points+=arr[i];    // add score
                         arr[i] = (arr[i]*2);
                         arr[i-1] = 0;
                     } else {
+                        points+=arr[i];    // add score
                         arr[i+1] = (arr[i]*2);
                         arr[i] = 0;
                     }
@@ -104,9 +115,11 @@ function right(field){
 
                 if(i>0 && arr[i]>0 && (arr[i] == arr[i+1] || arr[i] == arr[i-1]) && count == 0) { // если i не в конце, то проверяем и складываем число под индексом i уже после сдвига
                     if(arr[i] == arr[i-1]){
+                        points+=arr[i];    // add score
                         arr[i] = (arr[i]*2);
                         arr[i-1] = 0;
                     } else {
+                        points+=arr[i];    // add score
                         arr[i+1] = (arr[i]*2);
                         arr[i] = 0;
                     }
@@ -124,9 +137,11 @@ function right(field){
 
                 if(i>0 && arr[i]>0 && (arr[i] == arr[i+1] || arr[i] == arr[i-1]) && count == 0) { // если i не в конце, то проверяем и складываем число под индексом i уже после сдвига
                     if(arr[i] == arr[i-1]){
+                        points+=arr[i];    // add score
                         arr[i] = (arr[i]*2);
                         arr[i-1] = 0;
                     } else {
+                        points+=arr[i];    // add score
                         arr[i+1] = (arr[i]*2);
                         arr[i] = 0;
                     }
@@ -138,14 +153,18 @@ function right(field){
     console.log(field);
     var direction = 0; 
     editField(field, direction);
+    changeScore(points);
+
 }
 
 function left(field){
+    var points=0;
     field.forEach(arr => {  
         var count = 0;      
         for(let i = 0; i<=arr.length; i++){
             if(!arr[i] == 0){ // если не 0
                 if(arr[i] == arr[i+1]){
+                    points+=arr[i];    // add score
                     arr[i] = (arr[i]*2);
                     arr[i+1] = 0;
                     count++;
@@ -165,9 +184,11 @@ function left(field){
 
                 if(i<3 && arr[i]>0 && (arr[i] == arr[i+1] || arr[i] == arr[i-1]) && count == 0) { // если i не в конце, то проверяем и складываем число под индексом i уже после сдвига
                     if(arr[i] == arr[i+1]){
+                        points+=arr[i];    // add score
                         arr[i] = (arr[i]*2);
                         arr[i+1] = 0;
                     } else {
+                        points+=arr[i];    // add score
                         arr[i-1] = (arr[i]*2);
                         arr[i] = 0;
                     }
@@ -186,9 +207,11 @@ function left(field){
 
                 if(i<3 && arr[i]>0 && (arr[i] == arr[i+1] || arr[i] == arr[i-1]) && count == 0) { // если i не в конце, то проверяем и складываем число под индексом i уже после сдвига
                     if(arr[i] == arr[i+1]){
+                        points+=arr[i];    // add score
                         arr[i] = (arr[i]*2);
                         arr[i+1] = 0;
                     } else {
+                        points+=arr[i];    // add score
                         arr[i-1] = (arr[i]*2);
                         arr[i] = 0;
                     }
@@ -205,9 +228,11 @@ function left(field){
                 }
                 if(i<3 && arr[i]>0 && (arr[i] == arr[i+1] || arr[i] == arr[i-1]) && count == 0) { // если i не в конце, то проверяем и складываем число под индексом i уже после сдвига
                     if(arr[i] == arr[i+1]){
+                        points+=arr[i];    // add score
                         arr[i] = (arr[i]*2);
                         arr[i+1] = 0;
                     } else {
+                        points+=arr[i];    // add score
                         arr[i-1] = (arr[i]*2);
                         arr[i] = 0;
                     }
@@ -219,11 +244,13 @@ function left(field){
     console.log(field);
     var direction = 1;
     editField(field, direction);
+    changeScore(points);
 }
 
 
 
 function up(field){
+    var points=0;
         // переворачиваем массивы
         var minArr0=[];
         var minArr1=[];
@@ -263,6 +290,7 @@ function up(field){
         for(let i = 0; i<=arr.length; i++){
             if(!arr[i] == 0){ // если не 0
                 if(arr[i] == arr[i+1]){
+                    points+=arr[i];    // add score
                     arr[i] = (arr[i]*2);
                     arr[i+1] = 0;
                     count++;
@@ -282,9 +310,11 @@ function up(field){
 
                 if(i<3 && arr[i]>0 && (arr[i] == arr[i+1] || arr[i] == arr[i-1]) && count == 0) { // если i не в конце, то проверяем и складываем число под индексом i уже после сдвига
                     if(arr[i] == arr[i+1]){
+                        points+=arr[i];    // add score
                         arr[i] = (arr[i]*2);
                         arr[i+1] = 0;
                     } else {
+                        points+=arr[i];    // add score
                         arr[i-1] = (arr[i]*2);
                         arr[i] = 0;
                     }
@@ -303,9 +333,11 @@ function up(field){
 
                 if(i<3 && arr[i]>0 && (arr[i] == arr[i+1] || arr[i] == arr[i-1]) && count == 0) { // если i не в конце, то проверяем и складываем число под индексом i уже после сдвига
                     if(arr[i] == arr[i+1]){
+                        points+=arr[i];    // add score
                         arr[i] = (arr[i]*2);
                         arr[i+1] = 0;
                     } else {
+                        points+=arr[i];    // add score
                         arr[i-1] = (arr[i]*2);
                         arr[i] = 0;
                     }
@@ -322,9 +354,11 @@ function up(field){
                 }
                 if(i<3 && arr[i]>0 && (arr[i] == arr[i+1] || arr[i] == arr[i-1]) && count == 0) { // если i не в конце, то проверяем и складываем число под индексом i уже после сдвига
                     if(arr[i] == arr[i+1]){
+                        points+=arr[i];    // add score
                         arr[i] = (arr[i]*2);
                         arr[i+1] = 0;
                     } else {
+                        points+=arr[i];    // add score
                         arr[i-1] = (arr[i]*2);
                         arr[i] = 0;
                     }
@@ -359,9 +393,11 @@ function up(field){
         console.log(field);
         var direction = 2;
         editField(field, direction);
+        changeScore(points);
 }
 
 function down(field){
+    var points=0;
     console.log(field);
     // переворачиваем массивы
     var minArr0=[];
@@ -397,10 +433,12 @@ function down(field){
         for(let i = arr.length-1; i>=0; i--){
             if(!arr[i] == 0){
                 if(arr[i] == arr[i-1]){
+                    points+=arr[i];    // add score
                     arr[i] = (arr[i]*2);
                     arr[i-1] = 0;
                     count++;
                 }else if(arr[i] == arr[i+1]){
+                    points+=arr[i];    // add score
                     arr[i+1] = (arr[i]*2);
                     arr[i] = 0;
                     count++;
@@ -420,9 +458,11 @@ function down(field){
 
                 if(i>0 && arr[i]>0 && (arr[i] == arr[i+1] || arr[i] == arr[i-1]) && count == 0) { // если i не в конце, то проверяем и складываем число под индексом i уже после сдвига
                     if(arr[i] == arr[i-1]){
+                        points+=arr[i];    // add score
                         arr[i] = (arr[i]*2);
                         arr[i-1] = 0;
                     } else {
+                        points+=arr[i];    // add score
                         arr[i+1] = (arr[i]*2);
                         arr[i] = 0;
                     }
@@ -441,9 +481,11 @@ function down(field){
 
                 if(i>0 && arr[i]>0 && (arr[i] == arr[i+1] || arr[i] == arr[i-1]) && count == 0) { // если i не в конце, то проверяем и складываем число под индексом i уже после сдвига
                     if(arr[i] == arr[i-1]){
+                        points+=arr[i];    // add score
                         arr[i] = (arr[i]*2);
                         arr[i-1] = 0;
                     } else {
+                        points+=arr[i];    // add score
                         arr[i+1] = (arr[i]*2);
                         arr[i] = 0;
                     }
@@ -461,9 +503,11 @@ function down(field){
 
                 if(i>0 && arr[i]>0 && (arr[i] == arr[i+1] || arr[i] == arr[i-1]) && count == 0) { // если i не в конце, то проверяем и складываем число под индексом i уже после сдвига
                     if(arr[i] == arr[i-1]){
+                        points+=arr[i];    // add score
                         arr[i] = (arr[i]*2);
                         arr[i-1] = 0;
                     } else {
+                        points+=arr[i];    // add score
                         arr[i+1] = (arr[i]*2);
                         arr[i] = 0;
                     }
@@ -498,6 +542,7 @@ function down(field){
        console.log(field); 
        var direction = 3;
        editField(field, direction);
+       changeScore(points);
 }
 
 

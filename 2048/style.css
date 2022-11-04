@@ -20,7 +20,7 @@ body{
     width: 700px;
     height: 700px;
     margin: auto;
-    margin-top: 150px;
+    margin-top: 80px;
     background-color: white;
     border: 5px solid coral;
     border-radius: 15px;
@@ -31,7 +31,7 @@ body{
     width: 600px;
     height: 600px;
     margin-left: 50px;
-    background-color: coral;
+    background-color: #ff7f50;
     display: block;
 
     display: inline-grid;
@@ -51,12 +51,39 @@ body{
     display: block;
 }
 
+.score{
+    margin-left: 20%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    min-width: 100px;
+    background-color: #0000804b;
+    border: solid 2px #000080;
+    border-radius: 5px;
+}
+.score:last-child{
+    margin-left: 15px !important;
+}
+.score span{
+    font-size: 25px;
+    font-weight: bolder;
+    color: #000080;
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 480px) {
     .wrapper{
         width: 300px;
         height: 300px;
-        margin-top: 100px;
+        margin-top: 50px;
     }
     .gameField{
         margin-top: 25px;
@@ -71,12 +98,20 @@ body{
         font-size: 20px;
         padding-top: 12px;
     }
+    .score{
+        margin-top: 30px;
+        min-width: 70px;
+        width: 70px;
+    }
+    .score span{
+        font-size: 17.5px;
+    }
 }
 @media only screen and (max-width: 600px) and (min-width: 481px) {
     .wrapper{
         width: 400px;
         height: 400px;
-        margin-top: 150px;
+        margin-top: 60px;
     }
     .gameField{
         margin-top: 50px;
@@ -91,13 +126,25 @@ body{
         font-size: 25px;
         padding-top: 22px;
     }
+    .score{
+        margin-top: 30px;
+        min-width: 80px;
+        width: 80px;
+    }
+    .score span{
+        font-size: 20px;
+    }
+    .footer{
+        display: flex;
+        flex-direction: row;
+    }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     .wrapper{
         width: 500px;
         height: 500px;
-        margin-top: 150px;
+        margin-top: 70px;
     }
     .gameField{
         margin-top: 50px;
@@ -112,6 +159,14 @@ body{
         font-size: 35px;
         padding-top: 30px;
     }
+    .score{
+        margin-top: 30px;
+        min-width: 80px;
+        width: 80px;
+    }
+    .score span{
+        font-size: 20px;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -119,7 +174,7 @@ body{
     .wrapper{
         width: 600px;
         height: 600px;
-        margin-top: 150px;
+        margin-top: 80px;
     }
     .gameField{
         margin-top: 50px;
@@ -134,6 +189,14 @@ body{
         font-size: 35px;
         padding-top: 50px;
     }
+    .score{
+        margin-top: 30px;
+        min-width: 90px;
+        width: 90px;
+    }
+    .score span{
+        font-size: 23px;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -141,7 +204,7 @@ body{
     .wrapper{
         width: 700px;
         height: 700px;
-        margin-top: 150px;
+        margin-top: 80px;
     }
     .gameField{
         margin-top: 50px;
@@ -156,5 +219,13 @@ body{
     .grid-item span{
         font-size: 35px;
         padding-top: 50px;
+    }
+    .score{
+        margin-top: 30px;
+        min-width: 100px;
+        width: 100px;
+    }
+    .score span{
+        font-size: 25px;
     }
 }
