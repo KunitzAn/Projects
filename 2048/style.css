@@ -5,8 +5,8 @@
 html{
     position: sticky;
     margin: 0 auto;
-    height: 100vh;
-    max-height: 100vh;
+    height: 80vh;
+    max-height: 80vh;
     width: 100%;
     top: 0;
 }
