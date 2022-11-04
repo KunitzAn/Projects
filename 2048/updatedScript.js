@@ -1,6 +1,12 @@
 
 var key;
 
+function newGame(){
+    document.getElementById("scr").innerText = 0;
+    sessionStorage.removeItem('field');
+    download();
+}
+
 function changeScore(newPoints){
     var oldScore = document.getElementById("scr").innerText;
     var newScore = +oldScore + newPoints;
