@@ -33,9 +33,8 @@ body{
     width: 600px;
     height: 600px;
     margin-left: 50px;
-    background-color: #ff7f50;
+    background-color: #ff7f506c; /* ff7f50 */
     display: block;
-
     display: inline-grid;
     grid-template-columns: auto auto auto auto;
 }
@@ -63,6 +62,7 @@ body{
     background-color: #0000804b;
     border: solid 2px #000080;
     border-radius: 5px;
+    cursor: pointer;
 }
 .score:last-child{
     margin-left: 15px !important;
@@ -230,4 +230,43 @@ body{
     .score span{
         font-size: 25px;
     }
+}
+
+
+
+#endscr {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    margin-top: 450px;
+    width: 300px;
+    height: 150px;
+    border: 5px solid #000080;
+    background-color: #000080ad;
+    border-radius: 10px;
+    align-items: center;
+}
+.yourscore{
+    margin-top: 30px;
+}
+.yourscore span{
+    font-weight: bold;
+    font-size: 30px;
+    color: #ff7f50;
+}
+.endScore button{
+    padding: 7px;
+    margin-top: 16px;
+    background-color: #010158;
+    font-size: 20px;
+    color: #ff7f50;
+    border: 1px solid #ff7f50;
+    border-radius: 5px;
+    width:fit-content;
+    cursor: pointer;
 }

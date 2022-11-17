@@ -12,7 +12,7 @@
         <div class="score"><span>SCORE</span><span id="scr">0</span></div>
         <button class="score" onclick="newGame()"><span>NEW GAME</span></button></div>
     <div class="wrapper">
-        <div class="gameField">
+        <div class="gameField" id="background">
             <div class="grid-item"><span id="1"></span></div>
             <div class="grid-item"><span id="2"></span></div>
             <div class="grid-item"><span id="3"></span></div>
@@ -32,7 +32,17 @@
         </div>
     </div>
     
+
+
+    
+
+    <div class="endScore" id="endscr">
+        <div class="yourscore"><span>Your score: </span><span id="urscr"></span></div>
+        <button onclick="newGame()"><span>Play again</span></button>
+    </div>
+    
     <script src="./swipedEvents.js"></script>
     <script src="updatedScript.js"></script>
+    <script src="script2.js"></script>
 </body>
 </html>

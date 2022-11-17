@@ -13,6 +13,23 @@ function changeScore(newPoints){
     document.getElementById("scr").innerText = newScore;
 }
 
+
+
+function end(){
+
+    document.getElementById("endscr").style.display = "flex";
+    document.getElementById("background").style.backgroundColor = "rgba(255, 127, 80, 0.34)";
+    var endScore = document.getElementById("scr").innerText;
+    document.getElementById("urscr").innerText = endScore;
+
+}
+
+
+
+
+
+
+
 function editField(field, direction){
     // сохраняем массив в сешн сторадж
     sessionStorage.removeItem('field');
@@ -52,7 +69,7 @@ function editField(field, direction){
                 break;
         }
 
-        if(popnum.includes(i) && inOneArr[i] == 0){
+        if(popnum.includes(i) && inOneArr[i] == 0){ //добавляем новые 0 или 2
             document.getElementById(i+1).innerText = num;
             inOneArr[i] = num;
         } else {
@@ -62,9 +79,43 @@ function editField(field, direction){
     }
 
 
-    console.log(inOneArr);
-    sessionStorage.setItem("field", inOneArr);
+    // проверяем не конец ли игры 
+    var edgeNums = [0, 1, 2, 3, 4, 7, 8, 11, 12, 15];
+    var nonNull = 0;
+    var index = 66;
+    for(let i = 0; i<inOneArr.length; i++){
+        if(!inOneArr[i] == 0){ // если не 0, увеличиваем счетчик
+            nonNull++;
+        }else{
+            index=i;
+        }
+    }
+
+
+        if(nonNull>=15){      //если осталась только одна пустая ячейка
+
+        var fieldCopy = field;
+        var isNextArrMatchesCurrentOne = checkIfEndOfTheGame(fieldCopy);
+        }
+
+        if(isNextArrMatchesCurrentOne == true){
+            end();
+        } else {
+            sessionStorage.setItem("field", inOneArr);
+            return
+        }
+        
+        sessionStorage.setItem("field", inOneArr);
 }
+
+
+
+
+
+
+
+
+
 
 function right(field){
     var points = 0;
@@ -158,8 +209,10 @@ function right(field){
     });
     console.log(field);
     var direction = 0; 
-    editField(field, direction);
-    changeScore(points);
+
+        editField(field, direction);
+        changeScore(points);
+    
 
 }
 
@@ -249,8 +302,10 @@ function left(field){
     });
     console.log(field);
     var direction = 1;
-    editField(field, direction);
-    changeScore(points);
+
+        editField(field, direction);
+        changeScore(points);
+
 }
 
 
@@ -400,6 +455,7 @@ function up(field){
         var direction = 2;
         editField(field, direction);
         changeScore(points);
+        
 }
 
 function down(field){
@@ -547,8 +603,10 @@ function down(field){
        });
        console.log(field); 
        var direction = 3;
-       editField(field, direction);
-       changeScore(points);
+
+        editField(field, direction);
+        changeScore(points);
+        
 }
 
 
