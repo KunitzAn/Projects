@@ -33,7 +33,7 @@ body{
     width: 600px;
     height: 600px;
     margin-left: 50px;
-    background-color: #ff7f506c; /* ff7f50 */
+    background-color: #ff7f50; /* ff7f506c */
     display: block;
     display: inline-grid;
     grid-template-columns: auto auto auto auto;
@@ -43,6 +43,7 @@ body{
     border: 2px solid white;
     text-align: center;
     width: 150px;
+    height: 150px;
 }
 .grid-item span{
     color: white;
@@ -58,19 +59,38 @@ body{
     display: flex;
     flex-direction: column;
     text-align: center;
-    min-width: 100px;
-    background-color: #0000804b;
-    border: solid 2px #000080;
+    width: fit-content;
     border-radius: 5px;
     cursor: pointer;
+    padding: 5px;
+}
+.score span{
+    font-size: 18px;
+    font-weight: bolder;
+    color: #010158;
+}
+.score:first-child{
+    margin-right: 15px;
+    border: 3px solid #ff7f50;
+    border-radius: 8px;
+}
+.score:last-child span{
+    padding: 2px;
+    color: #ff7f50;
+    padding-left: 7px;
+    padding-right: 7px;
+    margin-top: 7px;
+    font-weight: bold;
 }
 .score:last-child{
     margin-left: 15px !important;
+    border: 3px solid #ff7f50;
+    border-radius: 8px;
+    background-color: #010158;
+    min-width: 100px ;
 }
-.score span{
-    font-size: 25px;
-    font-weight: bolder;
-    color: #000080;
+.score:last-child:hover{
+    background-color: #010192;
 }
 .footer{
     display: flex;
@@ -95,6 +115,7 @@ body{
     }
     .grid-item{
         width: 62.5px;
+        height: 62.5px;
     }
     .grid-item span{
         font-size: 20px;
@@ -102,14 +123,26 @@ body{
     }
     .score{
         margin-top: 30px;
-        min-width: 70px;
-        width: 70px;
+        margin-left: 10%;
     }
     .score span{
-        font-size: 17.5px;
+        font-size: 14px;
+    }
+    #endscr{
+        margin-top: 200px !important;
+        width: 200px !important;
+        height: 120px !important;
+    }
+    .yourscore{
+        margin-top: 12px !important;
+        font-size: 20px !important;
+    }
+    .endScore button{
+        margin-top: 10px !important;
+        font-size: 17px !important;
     }
 }
-@media only screen and (max-width: 600px) and (min-width: 481px) {
+@media only screen and (max-width: 599px) and (min-width: 481px) {
     .wrapper{
         width: 400px;
         height: 400px;
@@ -123,26 +156,39 @@ body{
     }
     .grid-item{
         width: 75px;
+        height: 75px;
     }
     .grid-item span{
         font-size: 25px;
         padding-top: 22px;
     }
-    .score{
-        margin-top: 30px;
-        min-width: 80px;
-        width: 80px;
-    }
-    .score span{
-        font-size: 20px;
-    }
     .footer{
         display: flex;
         flex-direction: row;
     }
+    .score{
+        margin-top: 30px;
+        margin-left: 10%;
+    }
+    .score span{
+        font-size: 14px;
+    }
+    #endscr{
+        margin-top: 270px !important;
+        width: 250px !important;
+        height: 130px !important;
+    }
+    .yourscore{
+        margin-top: 20px !important;
+        font-size: 26px !important;
+    }
+    .endScore button{
+        margin-top: 13px !important;
+        font-size: 18px !important;
+    }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 767px) and (min-width: 600px) {
     .wrapper{
         width: 500px;
         height: 500px;
@@ -156,6 +202,7 @@ body{
     }
     .grid-item{
         width: 100px;
+        height: 150px;
     }
     .grid-item span{
         font-size: 35px;
@@ -163,16 +210,23 @@ body{
     }
     .score{
         margin-top: 30px;
-        min-width: 80px;
-        width: 80px;
+        margin-left: 10%;
     }
     .score span{
-        font-size: 20px;
+        font-size: 16px;
+    }
+    #endscr{
+        margin-top: 300px !important;
+        width: 300px !important;
+        height: 150px !important;
+    }
+    .yourscore{
+        margin-top: 30px !important;
     }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 991px) and (min-width: 768px) {
     .wrapper{
         width: 600px;
         height: 600px;
@@ -186,6 +240,7 @@ body{
     }
     .grid-item{
         width: 125px;
+        height: 125px;
     }
     .grid-item span{
         font-size: 35px;
@@ -193,16 +248,17 @@ body{
     }
     .score{
         margin-top: 30px;
-        min-width: 90px;
-        width: 90px;
+        margin-left: 15% !important;
     }
-    .score span{
-        font-size: 23px;
+    #endscr{
+        margin-top: 350px !important;
+        width: 350px !important;
+        height: 200px !important;
     }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media only screen and (max-width: 1200px) and (min-width: 992px) {
     .wrapper{
         width: 700px;
         height: 700px;
@@ -213,10 +269,10 @@ body{
         width: 600px;
         height: 600px;
         margin-left: 50px;
-
     }
     .grid-item{
         width: 150px;
+        height: 150px;
     }
     .grid-item span{
         font-size: 35px;
@@ -224,18 +280,19 @@ body{
     }
     .score{
         margin-top: 30px;
-        min-width: 100px;
-        width: 100px;
+        margin-left: 20% !important;
     }
-    .score span{
-        font-size: 25px;
+    #endscr{
+        margin-top: 400px !important;
+        width: 350px !important;
+        height: 200px !important;
     }
 }
 
 
 
 #endscr {
-    display: flex;
+    display: none;
     flex-direction: column;
     position: absolute;
     top: 0;
@@ -243,30 +300,34 @@ body{
     left: 0;
     right: 0;
     margin: 0 auto;
-    margin-top: 450px;
-    width: 300px;
-    height: 150px;
+    margin-top: 400px;
+    width: 350px;
+    height: 200px;
     border: 5px solid #000080;
     background-color: #000080ad;
     border-radius: 10px;
     align-items: center;
 }
 .yourscore{
-    margin-top: 30px;
+    margin-top: 35px;
 }
 .yourscore span{
     font-weight: bold;
     font-size: 30px;
     color: #ff7f50;
+    text-shadow: #010158 3px 3px 0px;
 }
 .endScore button{
-    padding: 7px;
-    margin-top: 16px;
+    padding: 10px;
+    margin-top: 20px;
     background-color: #010158;
     font-size: 20px;
     color: #ff7f50;
-    border: 1px solid #ff7f50;
+    border: 2px solid #ff7f50;
     border-radius: 5px;
     width:fit-content;
     cursor: pointer;
+}
+.endScore button:hover{
+    background-color: #010192;
 }

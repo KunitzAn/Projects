@@ -5,6 +5,9 @@ function newGame(){
     document.getElementById("scr").innerText = 0;
     sessionStorage.removeItem('field');
     download();
+
+    document.getElementById("endscr").style.display = "none";
+    document.getElementById("background").style.backgroundColor = "rgb(255, 127, 80)";
 }
 
 function changeScore(newPoints){
@@ -16,7 +19,6 @@ function changeScore(newPoints){
 
 
 function end(){
-
     document.getElementById("endscr").style.display = "flex";
     document.getElementById("background").style.backgroundColor = "rgba(255, 127, 80, 0.34)";
     var endScore = document.getElementById("scr").innerText;
@@ -58,7 +60,7 @@ function editField(field, direction){
     
     for(let i = 0; i<inOneArr.length; i++){
 
-        var randomInt = Math.floor(Math.random() * 2);
+        var randomInt = Math.floor(Math.random() * 3);
         var num;
         switch(randomInt){
             case 0:
@@ -66,6 +68,9 @@ function editField(field, direction){
                 break;
             case 1:
                 num = 2;
+                break;
+            case 2:
+                num = 0;
                 break;
         }
 
@@ -75,6 +80,15 @@ function editField(field, direction){
         } else {
             document.getElementById(i+1).innerText = inOneArr[i];
         }
+
+        // меняем нули на ничего
+        for(let i = 1; i<=16; i++){
+            var currentNum = document.getElementById(i).innerText;
+            if(currentNum == 0){
+                document.getElementById(i).innerHTML = " ";
+            }
+        }
+
 
     }
 
@@ -627,7 +641,16 @@ function download(){
                 num = 2;
                 break;
         }
-        document.getElementById(i).innerText = num;
+
+        // меняем нули на ничего
+
+        if(num == 0){
+            document.getElementById(i).innerHTML = " ";
+        } else {
+            document.getElementById(i).innerText = num;
+        }
+
+
         field.push(num);
     }
     console.log(field);
@@ -681,6 +704,9 @@ function sum(direction){
 }
 
 document.onkeydown = (e, key) => {
+
+
+    // animation
 
 
     e = e || window.event;
