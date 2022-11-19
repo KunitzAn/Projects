@@ -353,11 +353,11 @@ body{
 }
 @keyframes newnum {
     0% {
-        background-color: #ff5050;
+        background-color: #ff6a50;
         opacity: 0;
     }
     50% {
-        background-color: #ff5050;;
+        background-color: #ff6a50;;
         opacity: 1;
     }
     100% {
