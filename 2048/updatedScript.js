@@ -688,12 +688,7 @@ function download(){
 
 function sum(direction){
     
-    // animation
-    for(let i = 1; i<=16; i++){
-        document.getElementById(i).classList.remove("animation-active");
-        document.getElementById("i" + i).classList.remove("new");
-        document.getElementById("i" + i).classList.remove("orange");
-    }
+
 
     var numData = sessionStorage.getItem("field");
     var arr1 = [];
@@ -741,7 +736,12 @@ function sum(direction){
 
 document.onkeydown = (e, key) => {
 
-
+    // animation
+    for(let i = 1; i<=16; i++){
+        document.getElementById(i).classList.remove("animation-active");
+        document.getElementById("i" + i).classList.remove("new");
+        document.getElementById("i" + i).classList.remove("orange");
+    }
 
 
     e = e || window.event;
