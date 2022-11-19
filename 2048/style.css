@@ -30,10 +30,10 @@ body{
 }
 .gameField{
     margin-top: 50px;
-    width: 600px;
-    height: 600px;
+    width: 615px;
+    height: 615px;
     margin-left: 50px;
-    background-color: #ff7f50; /* ff7f506c */
+    background-color: #fc9e7b; /* #ff7f50   ff7f506c */
     display: block;
     display: inline-grid;
     grid-template-columns: auto auto auto auto;
@@ -108,9 +108,9 @@ body{
         margin-top: 50px;
     }
     .gameField{
-        margin-top: 25px;
+        margin-top: 18px;
         width: 265px;
-        height: 250px;
+        height: 263px;
         margin-left: 18px;
     }
     .grid-item{
@@ -156,7 +156,7 @@ body{
     }
     .grid-item{
         width: 75px;
-        height: 75px;
+        height: 71px;
     }
     .grid-item span{
         font-size: 25px;
@@ -197,12 +197,12 @@ body{
     .gameField{
         margin-top: 50px;
         width: 415px;
-        height: 400px;
+        height: 415px;
         margin-left: 42px;
     }
     .grid-item{
         width: 100px;
-        height: 150px;
+        height: 100px;
     }
     .grid-item span{
         font-size: 35px;
@@ -235,7 +235,7 @@ body{
     .gameField{
         margin-top: 50px;
         width: 515px;
-        height: 500px;
+        height: 515px;
         margin-left: 42px;
     }
     .grid-item{
@@ -266,8 +266,8 @@ body{
     }
     .gameField{
         margin-top: 50px;
-        width: 600px;
-        height: 600px;
+        width: 615px;
+        height: 615px;
         margin-left: 50px;
     }
     .grid-item{
@@ -330,4 +330,38 @@ body{
 }
 .endScore button:hover{
     background-color: #010192;
+}
+
+.animation-active{
+    animation: poping 1s;
+    animation-iteration-count: 1;
+}
+@keyframes poping{
+    0% {
+        -webkit-filter: opacity(0);
+    }
+    100% {
+        -webkit-filter: opacity(1);
+    }
+}
+
+.orange {
+    background-color: #ff7f50;
+}
+.new{
+    animation: newnum 0.6s;
+}
+@keyframes newnum {
+    0% {
+        background-color: #ff5050;
+        opacity: 0;
+    }
+    50% {
+        background-color: #ff5050;;
+        opacity: 1;
+    }
+    100% {
+        background-color: #ff7f50;
+        opacity: 1;
+    }
 }

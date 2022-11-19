@@ -74,9 +74,14 @@ function editField(field, direction){
                 break;
         }
 
+
+
         if(popnum.includes(i) && inOneArr[i] == 0){ //добавляем новые 0 или 2
             document.getElementById(i+1).innerText = num;
             inOneArr[i] = num;
+            if(!num ==0) {
+                document.getElementById("i" + (i+1)).classList.add("new");
+            }
         } else {
             document.getElementById(i+1).innerText = inOneArr[i];
         }
@@ -84,12 +89,31 @@ function editField(field, direction){
         // меняем нули на ничего
         for(let i = 1; i<=16; i++){
             var currentNum = document.getElementById(i).innerText;
+            var item = document.getElementById("i" + i);
             if(currentNum == 0){
+                item.classList.remove("orange");
                 document.getElementById(i).innerHTML = " ";
+            } else {
+                item.classList.add("orange");
+                document.getElementById(i).classList.add("animation-active");
             }
         }
 
-
+        //animation
+        /*
+        for(let i = 1; i<=16; i++){
+            document.getElementById(i).classList.add("animation-active");
+            var span = document.getElementById(i).innerText;
+            var item = document.getElementById("i" + i).innerText;
+            item.classList.remove("");
+            item.classList.remove("");
+            if(!(span == 0)){
+                item.classList.add
+            } else {
+                item.classList.remove("");
+            }
+        }
+        */
     }
 
 
@@ -648,6 +672,8 @@ function download(){
             document.getElementById(i).innerHTML = " ";
         } else {
             document.getElementById(i).innerText = num;
+            document.getElementById("i" + i).classList.add("new");
+            document.getElementById("i" + i).classList.add("orange");
         }
 
 
@@ -701,12 +727,19 @@ function sum(direction){
         down(field);
         break;
     }
+
+
 }
 
 document.onkeydown = (e, key) => {
 
 
     // animation
+    for(let i = 1; i<=16; i++){
+        document.getElementById(i).classList.remove("animation-active");
+        document.getElementById("i" + i).classList.remove("new");
+    }
+
 
 
     e = e || window.event;
