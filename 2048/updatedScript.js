@@ -768,48 +768,28 @@ document.addEventListener('swiped', function(e) {
 });
 //swiped-left
 document.addEventListener('swiped-left', function(e) {
-    // animation
-    for(let i = 1; i<=16; i++){
-        document.getElementById(i).classList.remove("animation-active");
-        document.getElementById("i" + i).classList.remove("new");
-        document.getElementById("i" + i).classList.remove("orange");
-    }
+
     console.log(e.target); // the element that was swiped
     key = "left";
     sum(key);
 });
 //swiped-right
 document.addEventListener('swiped-right', function(e) {
-    // animation
-    for(let i = 1; i<=16; i++){
-        document.getElementById(i).classList.remove("animation-active");
-        document.getElementById("i" + i).classList.remove("new");
-        document.getElementById("i" + i).classList.remove("orange");
-    }
+
     console.log(e.target); // the element that was swiped
     key = "right";
     sum(key);
 });
 //swiped-up
 document.addEventListener('swiped-up', function(e) {
-    // animation
-    for(let i = 1; i<=16; i++){
-        document.getElementById(i).classList.remove("animation-active");
-        document.getElementById("i" + i).classList.remove("new");
-        document.getElementById("i" + i).classList.remove("orange");
-    }
+
     console.log(e.target); // the element that was swiped
     key = "up";
     sum(key);
 });
 //swiped-down
 document.addEventListener('swiped-down', function(e) {
-    // animation
-    for(let i = 1; i<=16; i++){
-        document.getElementById(i).classList.remove("animation-active");
-        document.getElementById("i" + i).classList.remove("new");
-        document.getElementById("i" + i).classList.remove("orange");
-    }
+
     console.log(e.target); // the element that was swiped
     key = "down";
     sum(key);
