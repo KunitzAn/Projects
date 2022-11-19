@@ -91,7 +91,6 @@ function editField(field, direction){
             var currentNum = document.getElementById(i).innerText;
             var item = document.getElementById("i" + i);
             if(currentNum == 0){
-                item.classList.remove("orange");
                 document.getElementById(i).innerHTML = " ";
             } else {
                 item.classList.add("orange");
@@ -738,6 +737,7 @@ document.onkeydown = (e, key) => {
     for(let i = 1; i<=16; i++){
         document.getElementById(i).classList.remove("animation-active");
         document.getElementById("i" + i).classList.remove("new");
+        item.classList.remove("orange");
     }
 
 
@@ -769,24 +769,48 @@ document.addEventListener('swiped', function(e) {
 document.addEventListener('swiped-left', function(e) {
     console.log(e.target); // the element that was swiped
     key = "left";
+        // animation
+        for(let i = 1; i<=16; i++){
+            document.getElementById(i).classList.remove("animation-active");
+            document.getElementById("i" + i).classList.remove("new");
+            item.classList.remove("orange");
+        }
     sum(key);
 });
 //swiped-right
 document.addEventListener('swiped-right', function(e) {
     console.log(e.target); // the element that was swiped
     key = "right";
+        // animation
+        for(let i = 1; i<=16; i++){
+            document.getElementById(i).classList.remove("animation-active");
+            document.getElementById("i" + i).classList.remove("new");
+            item.classList.remove("orange");
+        }
     sum(key);
 });
 //swiped-up
 document.addEventListener('swiped-up', function(e) {
     console.log(e.target); // the element that was swiped
     key = "up";
+        // animation
+        for(let i = 1; i<=16; i++){
+            document.getElementById(i).classList.remove("animation-active");
+            document.getElementById("i" + i).classList.remove("new");
+            item.classList.remove("orange");
+        }
     sum(key);
 });
 //swiped-down
 document.addEventListener('swiped-down', function(e) {
     console.log(e.target); // the element that was swiped
     key = "down";
+        // animation
+        for(let i = 1; i<=16; i++){
+            document.getElementById(i).classList.remove("animation-active");
+            document.getElementById("i" + i).classList.remove("new");
+            item.classList.remove("orange");
+        }
     sum(key);
 });
 
