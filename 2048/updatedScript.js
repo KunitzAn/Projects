@@ -766,6 +766,12 @@ document.onkeydown = (e, key) => {
 document.addEventListener('swiped', function(e) {
     console.log(e.target); // the element that was swiped
     console.log(e.detail.dir); // swiped direction
+        // animation
+        for(let i = 1; i<=16; i++){
+            document.getElementById(i).classList.remove("animation-active");
+            document.getElementById("i" + i).classList.remove("new");
+            document.getElementById("i" + i).classList.remove("orange");
+        }
 });
 //swiped-left
 document.addEventListener('swiped-left', function(e) {
