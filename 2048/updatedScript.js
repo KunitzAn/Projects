@@ -92,6 +92,7 @@ function editField(field, direction){
             var item = document.getElementById("i" + i);
             if(currentNum == 0){
                 document.getElementById(i).innerHTML = " ";
+                item.classList.remove("orange");
             } else {
                 item.classList.add("orange");
                 document.getElementById(i).classList.add("animation-active");
@@ -737,7 +738,7 @@ document.onkeydown = (e, key) => {
     for(let i = 1; i<=16; i++){
         document.getElementById(i).classList.remove("animation-active");
         document.getElementById("i" + i).classList.remove("new");
-        item.classList.remove("orange");
+        document.getElementById("i" + i).classList.remove("orange");
     }
 
 
@@ -767,50 +768,50 @@ document.addEventListener('swiped', function(e) {
 });
 //swiped-left
 document.addEventListener('swiped-left', function(e) {
+    // animation
+    for(let i = 1; i<=16; i++){
+        document.getElementById(i).classList.remove("animation-active");
+        document.getElementById("i" + i).classList.remove("new");
+        document.getElementById("i" + i).classList.remove("orange");
+    }
     console.log(e.target); // the element that was swiped
     key = "left";
-        // animation
-        for(let i = 1; i<=16; i++){
-            document.getElementById(i).classList.remove("animation-active");
-            document.getElementById("i" + i).classList.remove("new");
-            item.classList.remove("orange");
-        }
     sum(key);
 });
 //swiped-right
 document.addEventListener('swiped-right', function(e) {
+    // animation
+    for(let i = 1; i<=16; i++){
+        document.getElementById(i).classList.remove("animation-active");
+        document.getElementById("i" + i).classList.remove("new");
+        document.getElementById("i" + i).classList.remove("orange");
+    }
     console.log(e.target); // the element that was swiped
     key = "right";
-        // animation
-        for(let i = 1; i<=16; i++){
-            document.getElementById(i).classList.remove("animation-active");
-            document.getElementById("i" + i).classList.remove("new");
-            item.classList.remove("orange");
-        }
     sum(key);
 });
 //swiped-up
 document.addEventListener('swiped-up', function(e) {
+    // animation
+    for(let i = 1; i<=16; i++){
+        document.getElementById(i).classList.remove("animation-active");
+        document.getElementById("i" + i).classList.remove("new");
+        document.getElementById("i" + i).classList.remove("orange");
+    }
     console.log(e.target); // the element that was swiped
     key = "up";
-        // animation
-        for(let i = 1; i<=16; i++){
-            document.getElementById(i).classList.remove("animation-active");
-            document.getElementById("i" + i).classList.remove("new");
-            item.classList.remove("orange");
-        }
     sum(key);
 });
 //swiped-down
 document.addEventListener('swiped-down', function(e) {
+    // animation
+    for(let i = 1; i<=16; i++){
+        document.getElementById(i).classList.remove("animation-active");
+        document.getElementById("i" + i).classList.remove("new");
+        document.getElementById("i" + i).classList.remove("orange");
+    }
     console.log(e.target); // the element that was swiped
     key = "down";
-        // animation
-        for(let i = 1; i<=16; i++){
-            document.getElementById(i).classList.remove("animation-active");
-            document.getElementById("i" + i).classList.remove("new");
-            item.classList.remove("orange");
-        }
     sum(key);
 });
 
